@@ -14,7 +14,6 @@
         th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid #e5e7eb; }
         th { background: #f0f2f5; }
         tr:hover { background: #fafafa; }
-        .role-badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.85em; background: #e0e7ff; color: #3730a3; }
     </style>
 </head>
 <body>
@@ -34,7 +33,7 @@
             <tr>
                 <th>Username</th>
                 <th>Full Name</th>
-                <th>Role</th>
+                <th>Created At</th>
             </tr>
         </thead>
         <tbody>
@@ -42,7 +41,7 @@
                 <tr>
                     <td><?= esc($user['username']) ?></td>
                     <td><?= esc($user['full_name']) ?></td>
-                    <td><span class="role-badge"><?= esc($user['role']) ?></span></td>
+                    <td><?= esc($user['created_at']) ?></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
